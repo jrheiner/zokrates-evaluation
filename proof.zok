@@ -1,0 +1,7 @@
+import "hashes/sha256/512bitPacked" as sha256
+
+def main(private field a, private field b, private field c, private field d, field digest1, field digest2) -> field:
+    field[2] hash = sha256([a, b, c, d])
+    assert(hash[0] == digest1)
+    assert(hash[1] == digest2)
+    return 1
